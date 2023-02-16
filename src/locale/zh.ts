@@ -26,8 +26,9 @@ const locale = {
   */
   branchFetalGodPlace: ['碓', '廁', '爐', '門', '雞棲', '床'],
 
-  //                   0      1     2      3    4       5     6       7     8
-  fetalGodDirection: ['中', '東', '東南', '南', '西南', '西', '西北', '北', '東北'],
+  // 方向               0   1       2     3     4       5     6     7      8     9
+  fetalGodDirection: ['', '北', '西南', '東', '東南', '中', '西北', '西', '東北', '南'],
+
 
   fetalGodDayDesc: [
     // 甲            乙             丙             丁            戊             己              庚             辛             壬             癸
