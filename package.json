@@ -1,7 +1,7 @@
 {
   "name": "@lunisolar/plugin-fetalgod",
   "version": "0.0.1",
-  "description": "A lunisolar.js plugin",
+  "description": "lunisolar.js的胎神占方插件",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "typings/index.d.ts",
@@ -10,6 +10,13 @@
     "lint": "eslint --fix --ext .js,.ts src/ typings/ __tests__/",
     "test": "jest"
   },
+  "keywords": [
+    "lunisolar",
+    "plugin",
+    "lunar",
+    "胎神",
+    "胎神占方"
+  ],
   "author": "Natron Kan",
   "repository": {
     "type": "git",
