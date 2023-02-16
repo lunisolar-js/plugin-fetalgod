@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 
-const locale: LsrLocale = {
+const locale = {
   name: 'zh',
   /**
   逐月胎神起例
