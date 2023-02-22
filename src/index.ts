@@ -12,7 +12,7 @@ to
 ['', '北', '西南', '東', '東南', '中', '西北', '西', '東北', '南'],
 ```
 */
-const grid9 = [5, 3, 4, 9, 2, 7, 6, 1, 9]
+const grid9 = [5, 3, 4, 9, 2, 7, 6, 1, 8]
 
 const fetalGod: lunisolar.PluginFunc = async (options, lsClass, lsFactory) => {
   lsFactory.locale(zh, true)
@@ -26,6 +26,7 @@ const fetalGod: lunisolar.PluginFunc = async (options, lsClass, lsFactory) => {
       const stemPlace = locale.stemFetalGodPlace[daySb.stem.value % 5]
       const branchPlace = locale.branchFetalGodPlace[daySb.branch.value % 6]
       let directionValue = FETAL_GOD_DAY_DIRECTION[daySb.value % 60]
+      const isInside = directionValue < 0 ? -1 : 1
       const inOrOutSide =
         directionValue === 0
           ? ''
@@ -33,13 +34,13 @@ const fetalGod: lunisolar.PluginFunc = async (options, lsClass, lsFactory) => {
           ? locale.fetalGodOutsideDesc
           : locale.fetalGodInsideDesc
 
-      directionValue = grid9[directionValue] // directionValue取九宫数
-      const direction = inOrOutSide + locale.fetalGodDirection[Math.abs(directionValue)]
+      directionValue = grid9[Math.abs(directionValue)] // directionValue取九宫数
+      const direction = inOrOutSide + locale.fetalGodDirection[directionValue]
       const description = locale.fetalGodDayDesc[daySb.value]
       this._fetalGodData = {
         stemPlace,
         branchPlace,
-        directionValue,
+        directionValue: isInside * directionValue,
         direction,
         description
       }
