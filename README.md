@@ -39,5 +39,5 @@ fetalGodData 包含以下属性
 | stemPlace | 根据天干推算的胎神位置，有以下五种： ['門', '碓磨', '廚灶', '倉庫', '房床'] | string |
 | branchPlace  | 根据地支推算的胎神位置，有以下六种：['碓', '廁', '爐', '門', '雞棲', '床']| string |
 | direction | 胎神的方向，如'外东南'、'外西'、'内中' 等 | string |
+| directionValue | 返回方位对应的九宫数，外为正，内为负  | number |
 | description | 胎神占方的完整描述，如："占門碓外東南" | string |
-
